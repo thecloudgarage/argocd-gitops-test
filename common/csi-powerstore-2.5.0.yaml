@@ -419,7 +419,7 @@ spec:
           imagePullPolicy: IfNotPresent
           args:
             - "--csi-address=$(ADDRESS)"
-            - "--volume-name-prefix=novartis1-eksa-vol"
+            - "--volume-name-prefix=eksa-cluster-vol"
             - "--volume-name-uuid-length=10"
             - "--v=5"
             - "--leader-election"
@@ -450,7 +450,7 @@ spec:
             - "--csi-address=$(ADDRESS)"
             - "--v=5"
             - "--leader-election"
-            - "--snapshot-name-prefix=novartis1-eksa-snap"
+            - "--snapshot-name-prefix=eksa-cluster-snap"
           env:
             - name: ADDRESS
               value: /var/run/csi/csi.sock
